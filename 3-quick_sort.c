@@ -22,7 +22,7 @@ void partition_array(int *array, size_t size, int lo, int hi)
 
 	for (i = lo; i < hi; i++)
 	{
-		if (array[i] >= pivot)
+		if (array[i] > pivot)
 		{
 			for (j = i + 1; j <= hi; j++)
 			{
