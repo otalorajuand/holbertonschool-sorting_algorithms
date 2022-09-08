@@ -153,17 +153,10 @@ If an answer is required within a file, all your answers files must have a newli
 <h3>Tests</h3>
 
 <p>Here is a quick tip to help you test your sorting algorithms with big sets of random integers: <a href="/rltoken/PrnUEy74VVTcXp645KI0OQ" title="Random.org" target="_blank">Random.org</a></p>
-
   </div>
-</div>
-
-
-      
-
-        <div class="panel panel-default" id="project-quiz-questions-title">
-    <div class="panel-heading">
-      <h3 class="panel-title">
-        Quiz questions
+     
+<h3 class="panel-title">
+	Quiz questions
       </h3>
     </div>
 
