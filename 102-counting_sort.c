@@ -80,6 +80,9 @@ void counting_sort(int *array, size_t size)
 {
 	int i = 0, max = 0, *count = NULL, *array_copy = NULL;
 
+	if (size <=1)
+		return;
+
 	array_copy = calloc((int)size, sizeof(int));
 	if (!array_copy)
 		return;
