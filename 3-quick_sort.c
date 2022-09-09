@@ -1,4 +1,20 @@
 #include "sort.h"
+/**
+ * swap_array_elements - swaps two elements from an array.
+ * @array: A pointer to the first element of the array.
+ * @index_1: The position of the first element.
+ * @index_2: The position of the second element.
+* Return: Nothing
+ */
+
+void swap_array_elements(int *array, int index_1, int index_2)
+{
+	int tmp = 0;
+
+	tmp = array[index_1];
+	array[index_1] = array[index_2];
+	array[index_2] = tmp;
+}
 
 /**
  * partition_array - rearrange so the pivot gets it the middle
@@ -13,7 +29,7 @@
 
 void partition_array(int *array, size_t size, int lo, int hi)
 {
-	int i, j, pivot = 0, tmp = 0, pivot_index = hi;
+	int i, j, pivot = 0, pivot_index = hi;
 
 	if (hi <= lo)
 		return;
@@ -28,9 +44,7 @@ void partition_array(int *array, size_t size, int lo, int hi)
 			{
 				if (array[j] <= pivot)
 				{
-					tmp = array[j];
-					array[j] = array[i];
-					array[i] = tmp;
+					swap_array_elements(array, j, i);
 					pivot_index = i;
 					print_array(array, size);
 					break;
