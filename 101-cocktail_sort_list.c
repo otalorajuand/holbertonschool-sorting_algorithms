@@ -104,6 +104,9 @@ void cocktail_sort_list(listint_t **list)
 {
 	int flag = 0, *flag_p = NULL;
 
+	if (!list)
+		return;
+
 	flag_p = &flag;
 
 	do {
