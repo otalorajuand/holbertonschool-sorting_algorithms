@@ -86,7 +86,7 @@ void merge(int *array, int lo, int mid_point, int hi)
 	if (!aux)
 		return;
 
-	for (int i = 0; i < n2 + 1; i++)
+	for (i = 0; i < n2 + 1; i++)
 		aux[i] = array[lo + i];
 
 	fill_aux(array, aux, lo, mid_point, hi);
