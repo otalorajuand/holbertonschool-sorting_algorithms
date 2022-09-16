@@ -50,6 +50,28 @@ void fill_aux(int *array, int *aux, int lo, int mid_point, int hi)
 }
 
 /**
+ * print_array_merge - Prints an array of integers
+ * @array: The array to be printed
+ * @start: The lower index of the array.
+ * @end: The higher index of the array.
+* Return: Nothing.
+ */
+
+
+void print_array_merge(int *array, int start, int end)
+{
+	int i = 0;
+
+	for (i = start; i <= end; i++)
+	{
+		if (i > start)
+			printf(", ");
+		printf("%d", array[i]);
+	}
+	printf("\n");
+}
+
+/**
  * merge - Merges two consecutive ordered arrays.
  * @array: The original array.
  * @lo: The lower index
@@ -64,22 +86,10 @@ void merge(int *array, int lo, int mid_point, int hi)
 
 	printf("Merging...\n");
 	printf("[left]: ");
-	for (i = lo; i <= mid_point; i++)
-	{
-		if (i > lo)
-			printf(", ");
-		printf("%d", array[i]);
-	}
-	printf("\n");
+	print_array_merge(array, lo, mid_point);
 
 	printf("[right]: ");
-	for (i = mid_point + 1; i <= hi; i++)
-	{
-		if (i > mid_point + 1)
-			printf(", ");
-		printf("%d", array[i]);
-	}
-	printf("\n");
+	print_array_merge(array, mid_point + 1, hi);
 
 	n2 = hi - lo;
 	aux = calloc(n2 + 1, sizeof(int));
@@ -93,13 +103,7 @@ void merge(int *array, int lo, int mid_point, int hi)
 	free(aux);
 
 	printf("[Done]: ");
-	for (i = lo; i <= hi; i++)
-	{
-		if (i > lo)
-			printf(", ");
-		printf("%d", array[i]);
-	}
-	printf("\n");
+	print_array_merge(array, lo, hi);
 }
 
 /**
