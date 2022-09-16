@@ -2,10 +2,10 @@
 
 /**
  * swap_array_elements - swaps two elements from an array.
- * @array: A pointer to the first element of the array.
- * @index_1: The position of the first element.
- * @index_2: The position of the second element.
-* Return: Nothing
+ * @array: a pointer to the first element of the array.
+ * @index_1: the position of the first element.
+ * @index_2: the position of the second element.
+* return: nothing
  */
 
 void swap_array_elements(int *array, int index_1, int index_2)
